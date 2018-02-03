@@ -1,11 +1,10 @@
-import yaml
 from lib.twitter_streamer import Twitterator
+from lib.utility import get_credentials
 
 if __name__ == "__main__":
 
     try:
-        with open("data/credentials.yml", 'r') as stream:
-            credentials = yaml.load(stream)
+        credentials = get_credentials()
 
         westwood_bbox = "-118.4653781129,34.0353221283,-118.4084723665,34.0785727593"
 
