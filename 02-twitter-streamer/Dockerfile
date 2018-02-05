@@ -1,4 +1,4 @@
 FROM python
 RUN pip install pymongo twitter pyyaml
 WORKDIR home
-ENTRYPOINT ["python", "-m", "main"]
+ENTRYPOINT ["python", "-u", "main.py"]

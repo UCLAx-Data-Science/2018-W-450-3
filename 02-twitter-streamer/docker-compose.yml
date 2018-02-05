@@ -1,0 +1,18 @@
+version: "3"
+services:
+  this_jupyter:
+    image: jupyter/datascience-notebook
+    ports: 
+      - 80:8888
+    volumes: 
+      - .:/home/jovyan
+  this_streamer:
+    build: .
+    volumes: 
+      - .:/home
+  this_mongo:
+    image: mongo
+    volumes:
+      - mongodb:/data/db
+volumes:
+  mongodb:
