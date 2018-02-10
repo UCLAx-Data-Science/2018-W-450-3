@@ -4,4 +4,5 @@
 **/.local/
 **/data/credentials.yml
 **/.ipynb_checkpoints
+**/.DS_Store
 **/__pycache__
