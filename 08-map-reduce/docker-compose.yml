@@ -10,6 +10,10 @@ services:
        image: redis
        volumes:
            - redis_data:/data
+    this_mongo:
+        image: mongo
+        volumes:
+            - mongo_data:/data/db
     this_worker:
         build: docker/jupyter
         volumes:
@@ -24,4 +28,5 @@ services:
         entrypoint: ["tini","--","rq-dashboard","-H","this_redis", "-p", "5000"]
 volumes:
     redis_data:
+    mongo_data:
 
